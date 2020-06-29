@@ -28,7 +28,6 @@
 <script lang="ts">
 import { Component } from 'vue-property-decorator'
 import Container from './Container.vue'
-import ProfileImage from '@/assets/img/pp.jpg'
 import Title, {
   TITLE_SIZES,
   TITLE_VARIANTS,
@@ -59,7 +58,7 @@ export default class MainContainer extends Container {
   }
 
   get profileImage() {
-    return ProfileImage
+    return require('@/assets/img/pp.jpg')
   }
 
   get profileLabel() {
