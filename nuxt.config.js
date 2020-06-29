@@ -51,7 +51,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['vuesax/dist/vuesax.css'],
+  css: ['vuesax/dist/vuesax.css', '~assets/scss/index.scss'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -77,7 +77,11 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/style-resources',
   ],
+  styleResources: {
+    scss: ['./assets/scss/**/*.scss'],
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options

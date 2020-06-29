@@ -1,0 +1,3 @@
+@mixin color-theme($property, $color) {
+  #{$property}: unquote('rgb(#{var(unquote(' --vs-#{$color}'))})');
+}
