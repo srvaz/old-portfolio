@@ -17,8 +17,7 @@
           Hello, World!
         </Title>
         <VText class="v-main-container__text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam et
-          doloribus minus? Ab error laborum, nam voluptas voluptatem.
+          {{ profileData.description }}
         </VText>
       </div>
     </div>
@@ -26,7 +25,7 @@
 </template>
 
 <script lang="ts">
-import { Component } from 'vue-property-decorator'
+import { Component } from 'nuxt-property-decorator'
 import Container from './Container.vue'
 import Title, {
   TITLE_SIZES,
@@ -34,6 +33,7 @@ import Title, {
 } from '@/components/typography/Title.vue'
 import VFigure from '@/components/figure/VFigure.vue'
 import VText, { TEXT_VARIANTS } from '@/components/typography/VText.vue'
+import { Author } from '@/types/index'
 
 @Component({
   name: 'MainContainer',
@@ -43,11 +43,16 @@ import VText, { TEXT_VARIANTS } from '@/components/typography/VText.vue'
     VFigure,
     VText,
   },
+  middleware: ['profile'],
 })
 export default class MainContainer extends Container {
   textVariants = TEXT_VARIANTS
   titleSizes = TITLE_SIZES
   titleVariants = TITLE_VARIANTS
+
+  get profileData(): Author {
+    return this.$store.getters['Profile/profileData']
+  }
 
   get textVariant() {
     return this.textVariants.DARK
@@ -62,7 +67,8 @@ export default class MainContainer extends Container {
   }
 
   get profileLabel() {
-    return 'João Pedro Vaz, Front-End Developer'
+    const { firstName, lastName, career } = this.profileData
+    return `${firstName} ${lastName}, ${career}`
   }
 }
 </script>

@@ -48,6 +48,9 @@ export default {
     background_color: '#ffffff',
     display: 'standalone',
   },
+  router: {
+    middleware: 'profile',
+  },
   /*
    ** Global CSS
    */

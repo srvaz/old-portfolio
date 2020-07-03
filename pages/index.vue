@@ -1,7 +1,9 @@
 <template>
-  <div class="container">
-    <MainContainer />
-  </div>
+  <transition>
+    <div class="container">
+      <MainContainer />
+    </div>
+  </transition>
 </template>
 
 <script lang="ts">
