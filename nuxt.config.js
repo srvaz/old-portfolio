@@ -8,7 +8,7 @@ export default {
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
-  target: 'static',
+  // target: 'static',
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
@@ -47,6 +47,9 @@ export default {
     theme_color: '#1a5cff',
     background_color: '#ffffff',
     display: 'standalone',
+  },
+  env: {
+    API_URL: 'https://5efe8072dd373900160b4385.mockapi.io',
   },
   router: {
     middleware: 'profile',
