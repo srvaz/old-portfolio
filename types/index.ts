@@ -7,3 +7,18 @@ export type Author = {
   description: string
   career: string
 }
+
+export type Skill = {
+  cover: string
+  description: string
+  icon: string
+  label: string
+  link?: string
+  name: string
+  recommenderProfiles?: RecommenderProfile[]
+}
+
+export type RecommenderProfile = {
+  name: string
+  avatar: string
+}
