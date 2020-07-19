@@ -43,7 +43,7 @@ export default class VFigure extends Vue {
   position: relative;
 
   img {
-    box-shadow: -16px 16px 30px rgba(0, 0, 0, 0.35);
+    box-shadow: -16px 16px 30px $color-shadow;
     filter: grayscale(100%) brightness(0.8) contrast(120%);
     height: 500px;
     object-fit: cover;

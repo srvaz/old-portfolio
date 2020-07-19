@@ -28,7 +28,7 @@ export default class Container extends Vue {
   padding: $space-md;
 
   @media (min-width: $screen-lg) {
-    padding: $space-st 0;
+    padding: $space-xl 0;
   }
 
   .v-container__wrapper {
