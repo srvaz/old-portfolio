@@ -89,10 +89,6 @@ export default class Title extends Vue {
   get isSubtitled(): boolean {
     return !!this.subtitle
   }
-
-  mounted() {
-    console.log('SUCK MY DICK', this.$slots)
-  }
 }
 </script>
 
